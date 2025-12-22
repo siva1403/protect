@@ -9,4 +9,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Run a simple command
-        run: echo "Hello, world! This job is running on a ${{ runner.os }} server."
+        run: echo "Hello, siva! This job is running on a ${{ runner.os }} server."
