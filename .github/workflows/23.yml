@@ -6,7 +6,7 @@ name: CI
 on: [workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
       - name: Grant execute permission for the script (optional, but recommended)
@@ -15,24 +15,6 @@ jobs:
         run: ./dep.sh
       - name: List files in the repository root
         run: ls -R # Lists files recursively from the current director      
-      - uses: actions/checkout@v4
-      - name: Upload JAR artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-jar-file
-          path: ${{ env.JAR_PATH }}
-                    
-deploy-jar:
-    needs: build-jar
-    runs-on: [self-hosted]
-    steps:
-      - name: Download JAR artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: app-jar-file
-          path: ./downloaded-jar-dir
-      - name: Deploy the JAR
-        run: |
-          echo "JAR file downloaded to: ./downloaded-jar-dir"
-          # Example command to run the JAR
-          java -jar ./downloaded-jar-dir/*.jar
+      
+     
+
