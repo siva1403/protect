@@ -12,5 +12,6 @@ jobs:
      # - name: Run a one-line script
       - run: sudo apt-get install git openjdk-11-jre maven -y
       - run: git clone https://github.com/siva1403/leaf.git
+      - run: cd /home/ubuntu/leaf
       - run: mvn clean package 
         
