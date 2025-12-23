@@ -17,7 +17,7 @@ jobs:
         run: ls -R # Lists files recursively from the current directory
       - name: Enter folder and read data using 'cd'
          run:| 
-            cd leaf/
+            cd /leaf
       - name: run maven package
         run: mvn clean install
         
