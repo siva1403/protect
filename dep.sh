@@ -6,4 +6,3 @@ git clone https://github.com/NarenPrakash/thymeleafExample.git
 cd "./thymeleafExample"
 mvn clean install
 cd "./target/"
-java -jar *.jar
