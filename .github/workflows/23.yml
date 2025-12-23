@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
      # - name: Run a one-line script
-      - run: sudo apt-get install git -y
+      - run: sudo apt-get install git openjdk-11-jre maven -y
         
         
