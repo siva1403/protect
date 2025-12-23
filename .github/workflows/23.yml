@@ -16,7 +16,7 @@ jobs:
       - name: List files in the repository root
         run: ls -R # Lists files recursively from the current directory
       - name: Enter folder and read data using 'cd'
-        run: cd /leaf
+        run: cd ./thymeleafExample
       - name: maven package
         run: mvn clean install
         
