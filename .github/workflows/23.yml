@@ -9,9 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Grant execute permission for the script (optional, but recommended)
+        run: chmod +x ./dep.sh
+      - name: Run the shell script
+        run: ./dep.sh
+        
      # - name: Run a one-line script
-      - run: sudo apt-get install git openjdk-11-jre maven -y
-      - run: git clone https://github.com/siva1403/leaf.git
+     # - run: sudo apt-get install git openjdk-11-jre maven -y
+     # - run: git clone https://github.com/siva1403/leaf.git
      #  - run: cd */leaf
-      - run: mvn clean install
+     # - run: mvn clean install
         
