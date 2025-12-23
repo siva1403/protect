@@ -18,7 +18,7 @@ jobs:
       - name: Enter folder and read data using 'cd'
         run: cd ./thymeleafExample
       - name: maven package
-        run: mvn install
+        run: mvn package
         
           
      # - name: Run a one-line script
