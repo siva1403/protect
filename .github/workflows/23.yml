@@ -6,7 +6,7 @@ name: CI
 on: [workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: a-VirtualBox
     steps:
       - uses: actions/checkout@v4
       - name: Grant execute permission for the script (optional, but recommended)
@@ -15,10 +15,10 @@ jobs:
         run: ./dep.sh
       - name: List files in the repository root
         run: ls -R # Lists files recursively from the current directory
-      - name: Enter folder and read data using 'cd'
-        run: cd ./thymeleafExample
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml
+     # - name: Enter folder and read data using 'cd'
+     #   run: cd ./thymeleafExample
+     # - name: Build with Maven
+     #   run: mvn -B package --file pom.xml
         
           
      # - name: Run a one-line script
