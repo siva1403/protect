@@ -13,7 +13,15 @@ jobs:
         run: chmod +x ./dep.sh
       - name: Run the shell script
         run: ./dep.sh
+      - name: List files in the repository root
+        run: ls -R # Lists files recursively from the current directory
+      - name: Enter folder and read data using 'cd'
+         run:| 
+            cd leaf/
+      - name: run maven package
+        run: mvn clean install
         
+          
      # - name: Run a one-line script
      # - run: sudo apt-get install git openjdk-11-jre maven -y
      # - run: git clone https://github.com/siva1403/leaf.git
