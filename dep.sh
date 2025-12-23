@@ -5,4 +5,4 @@ sudo apt-get install maven -y
 git clone https://github.com/NarenPrakash/thymeleafExample.git
 cd /thymeleafExample
 mvn clean install
-cd /target/*.jar
+cd /thymeleafExample/target/*.jar
