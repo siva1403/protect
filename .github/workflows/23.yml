@@ -10,4 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
-        run: ./dep.sh
+        run: apt-get install git openjdk-11-jre maven
+        
+        
