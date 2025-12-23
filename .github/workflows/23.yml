@@ -21,3 +21,18 @@ jobs:
         with:
           name: app-jar-file
           path: ${{ env.JAR_PATH }}
+                    
+deploy-jar:
+    needs: build-jar
+    runs-on: [self-hosted]
+    steps:
+      - name: Download JAR artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-jar-file
+          path: ./downloaded-jar-dir
+      - name: Deploy the JAR
+        run: |
+          echo "JAR file downloaded to: ./downloaded-jar-dir"
+          # Example command to run the JAR
+          java -jar ./downloaded-jar-dir/*.jar
