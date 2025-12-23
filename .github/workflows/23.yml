@@ -14,16 +14,10 @@ jobs:
       - name: Run the shell script
         run: ./dep.sh
       - name: List files in the repository root
-        run: ls -R # Lists files recursively from the current directory
-     # - name: Enter folder and read data using 'cd'
-     #   run: cd ./thymeleafExample
-     # - name: Build with Maven
-     #   run: mvn -B package --file pom.xml
-        
-          
-     # - name: Run a one-line script
-     # - run: sudo apt-get install git openjdk-11-jre maven -y
-     # - run: git clone https://github.com/siva1403/leaf.git
-     #  - run: cd */leaf
-     # - run: mvn clean install
+        run: ls -R # Lists files recursively from the current director      
+      - uses: actions/checkout@v4
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-jar-file
         
