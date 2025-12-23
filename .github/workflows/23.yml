@@ -17,8 +17,8 @@ jobs:
         run: ls -R # Lists files recursively from the current directory
       - name: Enter folder and read data using 'cd'
         run: cd ./thymeleafExample
-      - name: maven package
-        run: mvn package
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
         
           
      # - name: Run a one-line script
